@@ -1,14 +1,9 @@
-import asyncio
-import datetime
-import traceback
-from concurrent.futures import CancelledError
 
 import discord
 import time
-import math
 from discord.ext import commands
 
-class AnnounceCog:
+class announce:
     def __init__(self, bot):
         self.bot = bot
         self.running = True
@@ -198,4 +193,4 @@ class AnnounceCog:
             await ctx.send("What are you doing? :(")
 
 def setup(bot):
-    bot.add_cog(AnnounceCog(bot))
+    bot.add_cog(announce(bot))

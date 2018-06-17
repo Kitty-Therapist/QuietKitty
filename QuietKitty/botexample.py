@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix="+",
 bot.starttime = datetime.datetime.now()
 bot.startup_done = False
 
-initial_extensions = ['announce']
+initial_extensions = ['announce', 'Reload']
 
 if __name__ == '__main__':
     for extension in initial_extensions:
