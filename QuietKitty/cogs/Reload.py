@@ -2,6 +2,7 @@ import asyncio
 import importlib
 import os
 from subprocess import Popen
+import subprocess
 
 from discord.ext import commands
 
