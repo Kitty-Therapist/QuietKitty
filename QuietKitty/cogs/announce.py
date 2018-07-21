@@ -110,26 +110,6 @@ class announce:
         else: 
             await ctx.send("What are you doing? :(")
 
-    @commands.command()
-    @commands.bot_has_permissions(manage_roles=True)
-    @commands.guild_only()
-    async def bananakin(self, ctx: commands.Context, *,bananakin = ""):
-        channel= ctx.bot.get_channel(390300266244866049)
-        role_id= 422016573381804033
-        role= discord.utils.find(lambda r: r.id == role_id, ctx.guild.roles)
-        if role is None:
-            await ctx.send("Did you delete that role, <@186002153066725378>?")
-            return 
-            
-        if(bananakin != ""):
-            try:
-                await role.edit(mentionable=True)
-                await channel.send(f"⸤ <@&422016573381804033> ⸣ {bananakin}\nGo here at https://www.twitch.tv/bananakin_skywalker !\n\nIf you would like to un-/assign the role. Head on over to <#390296878773960705> and do ``_selfassign Bananakin's Stream``")
-                await role.edit(mentionable=False)      
-            except discord.Forbidden:
-                await ctx.send("I wasn't able to send a message in the streaming channel. Please check that I am able to talk.")
-        else: 
-            await ctx.send("What are you doing? :(")
 
     @commands.command()
     @commands.bot_has_permissions(manage_roles=True)
